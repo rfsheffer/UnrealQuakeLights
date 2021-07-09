@@ -1,0 +1,25 @@
+﻿{
+  "FileVersion": 3,
+  "Version": 1,
+  "VersionName": "1.0",
+  "FriendlyName": "UnrealQuakeLights",
+  "Description": "Unreal Implementation of Quake light style patterns",
+  "Category": "Generator",
+  "CreatedBy": "Ryan F Sheffer",
+  "CreatedByURL": "https://github.com/rfsheffer",
+  "DocsURL": "",
+  "MarketplaceURL": "",
+  "SupportURL": "",
+  "CanContainContent": true,
+  "IsBetaVersion": false,
+  "Installed": false,
+  "Modules": [
+    {
+      "Name": "UnrealQuakeLights",
+      "Type": "Runtime",
+      "LoadingPhase": "Default"
+    }
+  ],
+  "Plugins": [
+  ]
+}
