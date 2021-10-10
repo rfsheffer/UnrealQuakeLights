@@ -92,6 +92,8 @@ void UQuakeLightPatternsComponent::TickComponent(float DeltaTime, ELevelTick Tic
 	{
 		LightComponent->SetIntensity(UsedIntensity * CurrentPatternOutput * Amplitude);
 	}
+
+	OnQuakeLightPatternChanged.Broadcast(pattern[charIndex], CurrentPatternOutput);
 }
 
 //---------------------------------------------------------------------------------------------------------------------

@@ -39,6 +39,8 @@ enum class EQuakeLightPattern : uint8
 	LAST_PATTERN_INDEX UMETA(Hidden),
 };
 
+DECLARE_DYNAMIC_MULTICAST_DELEGATE_TwoParams(FOnQuakeLightPatternChangedSignature, uint8, patternChar, float, patternFrac);
+
 /**
  * A component that modifies light intensities of a light component in patterns originally defined in the 1996 game Quake.
  * If the light component is not set, it will choose the first found light component in the actor this component is placed in.
@@ -81,6 +83,10 @@ public:
 	/** The baseline pattern to use if no custom pattern is defined. */
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Quake Light")
 	EQuakeLightPattern Pattern;
+
+	/// Called each tick with the output pattern in char and float intensity
+	UPROPERTY(BlueprintAssignable)
+	FOnQuakeLightPatternChangedSignature OnQuakeLightPatternChanged;
 
 protected:
 
